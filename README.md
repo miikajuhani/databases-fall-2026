@@ -3,7 +3,7 @@
 ## Start Lab 0
 
 1. [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/miikajuhani/databases-fall-2026?quickstart=1)
-1. Click **Create codespace**.
+1. Click **Create new codespace**.
 2. Wait for Codespaces to finish its automatic setup.
 3. Open `lab0/Lab0-PostgreSQL-basics.ipynb` from the Explorer in the left sidebar.
 4. Click **Select Kernel** in the top-right corner and select the provided **Python 3.12** environment.
