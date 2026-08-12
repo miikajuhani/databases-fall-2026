@@ -2,10 +2,10 @@
 
 ## Start Lab 0
 
-1. Click **Open in GitHub Codespaces** on this repository and create a Codespace.
-2. Wait for Codespaces to finish its automatic setup. Its setup output will say that PostgreSQL is ready.
-3. Open [`lab0/Lab0-PostgreSQL-basics.ipynb`](lab0/Lab0-PostgreSQL-basics.ipynb).
-4. If VS Code asks, select the provided Python kernel, then run the cells from top to bottom.
+1. [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/miikajuhani/databases-fall-2026?quickstart=1)
+3. Wait for Codespaces to finish its automatic setup. Its setup output will say that PostgreSQL is ready.
+4. Open [`lab0/Lab0-PostgreSQL-basics.ipynb`](lab0/Lab0-PostgreSQL-basics.ipynb).
+5. If VS Code asks, select the provided Python kernel, then run the cells from top to bottom.
 
 The first executable cells check the connection and run `SELECT version()`. PostgreSQL is already running: do **not** run Docker Compose, configure pgAdmin, install PostgreSQL locally, or write Python connection code for Lab 0.
 
