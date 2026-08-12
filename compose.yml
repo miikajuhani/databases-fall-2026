@@ -1,0 +1,53 @@
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: dbdm
+      POSTGRES_USER: student
+      POSTGRES_PASSWORD: student
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U student -d dbdm"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 5s
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  workspace:
+    build:
+      context: ./notebook
+    command: sleep infinity
+    working_dir: /workspaces/databases-fall-2026
+    environment:
+      DATABASE_URL: postgresql+psycopg://student:student@postgres:5432/dbdm
+      PGHOST: postgres
+      PGPORT: "5432"
+      PGDATABASE: dbdm
+      PGUSER: student
+      PGPASSWORD: student
+    volumes:
+      - .:/workspaces/databases-fall-2026:cached
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  pgadmin:
+    image: dpage/pgadmin4:9
+    profiles: ["tools"]
+    ports:
+      - "8080:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: student@dbdm.local
+      PGADMIN_DEFAULT_PASSWORD: student
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+      - ./pgadmin/servers.json:/pgadmin4/servers.json:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres-data:
+  pgadmin-data:

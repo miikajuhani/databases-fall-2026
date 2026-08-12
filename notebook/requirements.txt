@@ -1,0 +1,4 @@
+jupysql
+ipykernel
+psycopg[binary]
+sqlalchemy

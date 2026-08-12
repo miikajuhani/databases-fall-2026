@@ -1,0 +1,21 @@
+{
+  "name": "Databases — Fall 2026",
+  "dockerComposeFile": "../compose.yml",
+  "service": "workspace",
+  "runServices": ["postgres"],
+  "workspaceFolder": "/workspaces/databases-fall-2026",
+  "shutdownAction": "stopCompose",
+  "overrideCommand": false,
+  "postCreateCommand": "python .devcontainer/wait_for_postgres.py",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "jupyter.notebookFileRoot": "${workspaceFolder}"
+      }
+    }
+  }
+}
