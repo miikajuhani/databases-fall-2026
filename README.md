@@ -3,9 +3,11 @@
 ## Start Lab 0
 
 1. [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/miikajuhani/databases-fall-2026?quickstart=1)
-3. Wait for Codespaces to finish its automatic setup.
-4. Open [`lab0/Lab0-PostgreSQL-basics.ipynb`](lab0/Lab0-PostgreSQL-basics.ipynb).
-5. Select Python 3.12.11 as the kernel from top-right corner.
+1. Click **Create codespace**.
+2. Wait for Codespaces to finish its automatic setup.
+3. Open `lab0/Lab0-PostgreSQL-basics.ipynb` from the Explorer in the left sidebar.
+4. Click **Select Kernel** in the top-right corner and select the provided **Python 3.12** environment.
+5. Click **Run All**.
 
 The first executable cells check the connection and run `SELECT version()`. PostgreSQL is already running: do **not** run Docker Compose, configure pgAdmin, install PostgreSQL locally, or write Python connection code for Lab 0.
 
