@@ -7,7 +7,7 @@
 2. Wait for Codespaces to finish its automatic setup.
 3. Open `lab0/Lab0-PostgreSQL-basics.ipynb` from the Explorer in the left sidebar.
 4. Click **Select Kernel** in the top-right corner and select the provided **Python 3.12** environment.
-5. Click **Run All**.
+5. Run the notebook cells from top to bottom, one at a time, using the play button or `Shift+Enter`. Do **not** click **Run All** during the guided lab; wait for the instructor before moving to the next cell.
 
 The first executable cells check the connection and run `SELECT version()`. PostgreSQL is already running: do **not** run Docker Compose, configure pgAdmin, install PostgreSQL locally, or write Python connection code for Lab 0.
 
